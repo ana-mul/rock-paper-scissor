@@ -21,6 +21,7 @@
     <title>Frontend Mentor | Rock, Paper, Scissors</title>
   </head>
   <body>
+    <!-- HEADER -->
     <header>
       <div class="score-container-a">
         <img src="images/logo.svg" alt="logo" class="logo" />
@@ -31,47 +32,56 @@
       </div>
     </header>
 
+    <!-- MAIN -->
     <main>
       <div class="game-container">
         <div class="paper-container">
-          <button class="btn-paper" type="button">
+          <button class="btn-choice btn-paper" type="button">
             <img src="images/icon-paper.svg" alt="paper" class="img-paper" />
           </button>
         </div>
-        <div class="scissor-container">
-          <button class="btn-scissor" type="button">
+        <div class="scissors-container">
+          <button class="btn-choice btn-scissors" type="button">
             <img
               src="images/icon-scissors.svg"
               alt="scissors"
-              class="img-scissor"
+              class="img-scissors"
             />
           </button>
         </div>
         <div class="rock-container">
-          <button class="btn-rock" type="button">
+          <button class="btn-choice btn-rock" type="button">
             <img src="images/icon-rock.svg" alt="rock" class="img-rock" />
           </button>
         </div>
       </div>
     </main>
 
+    <!--SECTION GAME-->
     <section class="game">
-      <div class="user-choice">
+      <!-- SECTION USER CHOICE -->
+      <section class="scissors-section">
         <h3 class="choice-h3">you picked</h3>
-        <div class="scissor-game-container">
-          <button class="btn-game-scissor" type="button">
+        <div class="scissors-game-container">
+          <button class="btn-game-scissors" type="button">
             <img
               src="images/icon-scissors.svg"
               alt="scissors"
-              class="img-game-scissor"
+              class="img-game-scissors"
             />
           </button>
         </div>
+      </section>
+      <section class="rock-section">
+        <h3 class="choice-h3">you picked</h3>
         <div class="rock-game-container">
           <button class="btn-game-rock" type="button">
             <img src="images/icon-rock.svg" alt="rock" class="img-game-rock" />
           </button>
         </div>
+      </section>
+      <section class="paper-section">
+        <h3 class="choice-h3">you picked</h3>
         <div class="paper-game-container">
           <button class="btn-game-paper" type="button">
             <img
@@ -81,24 +91,38 @@
             />
           </button>
         </div>
+      </section>
+
+      <!--PLAY AGAIN-->
+      <div class="play-again">
+        <h2 id="result"></h2>
+        <button class="playagain-btn">play again</button>
       </div>
-      <div class="system-choice">
+
+      <!-- SECTION SYS CHOICE -->
+      <section class="scissors-sec-sys">
         <h3 class="choice-h3">the house picked</h3>
-        <div class="scissor-game-container">
-          <button class="btn-game-scissor" type="button">
+        <div class="scissors-game-container-s">
+          <button class="btn-game-scissors" type="button">
             <img
               src="images/icon-scissors.svg"
               alt="scissors"
-              class="img-game-scissor"
+              class="img-game-scissors"
             />
           </button>
         </div>
-        <div class="rock-game-container">
+      </section>
+      <section class="rock-sec-sys">
+        <h3 class="choice-h3">the house picked</h3>
+        <div class="rock-game-container-s">
           <button class="btn-game-rock" type="button">
             <img src="images/icon-rock.svg" alt="rock" class="img-game-rock" />
           </button>
         </div>
-        <div class="paper-game-container">
+      </section>
+      <section class="paper-sec-sys">
+        <h3 class="choice-h3">the house picked</h3>
+        <div class="paper-game-container-s">
           <button class="btn-game-paper" type="button">
             <img
               src="images/icon-paper.svg"
@@ -107,9 +131,10 @@
             />
           </button>
         </div>
-      </div>
+      </section>
     </section>
 
+    <!-- SECTION RULES -->
     <section class="rules">
       <div class="rules-container">
         <button class="btn-rules" type="button">rules</button>

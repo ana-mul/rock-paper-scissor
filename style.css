@@ -22,7 +22,7 @@ header {
   align-items: center;
   width: 100%;
   height: auto;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 .score-container-a {
   display: flex;
@@ -69,7 +69,7 @@ header {
   margin-left: 15px;
 }
 main {
-  display: none; /*ACA NO OLVIDARME DE SACAR */
+  display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -86,7 +86,7 @@ main {
   height: 300px;
 }
 .paper-container,
-.scissor-container,
+.scissors-container,
 .rock-container {
   display: flex;
   justify-content: center;
@@ -103,7 +103,7 @@ main {
   left: -20px;
   bottom: 210px;
 }
-.scissor-container {
+.scissors-container {
   border-color: hsl(40, 84%, 53%);
   box-shadow: 0px 3.5px 0px hsla(39, 89%, 41%, 0.977);
   right: -20px;
@@ -116,7 +116,7 @@ main {
   bottom: 0px;
 }
 .btn-paper,
-.btn-scissor,
+.btn-scissors,
 .btn-rock {
   width: 90px;
   height: 90px;
@@ -125,7 +125,7 @@ main {
   box-shadow: 0px 5px 1px rgba(0, 0, 0, 0.167) inset;
 }
 .img-paper,
-.img-scissor,
+.img-scissors,
 .img-rock {
   width: 40px;
   height: 45px;
@@ -181,29 +181,42 @@ main {
 }
 
 /* GAME */
-.game {
-  display: flex;
-  flex-direction: space-between;
+/*SECTION GAME*/
+.game{
+    display: flex;
+    flex-direction: space-between;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+/*animation*/
+@keyframes picked {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+/*end*/
+/*GAME USER CHOICE*/
+.rock-section,
+.paper-section,
+.scissors-section {
+  display: none;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
   width: 100%;
   margin-top: 50px;
-}
-.user-choice,
-.system-choice {
-  display: none; /*game container*/
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  position: relative;
-}
-.user-choice {
-  left: 150px;
-}
-.system-choice {
-  right: 150px;
+  animation: picked 2s ease 0s 1 normal forwards;
+  left: 100px;
 }
 .choice-h3 {
   color: white;
@@ -212,7 +225,7 @@ main {
   font-size: 20px;
   margin-bottom: 20px;
 }
-.scissor-game-container,
+.scissors-game-container,
 .rock-game-container,
 .paper-game-container {
   display: flex;
@@ -227,7 +240,7 @@ main {
   border-color: hsl(230, 89%, 65%);
   box-shadow: 0px 3.5px 0px hsla(230, 63%, 54%, 0.977);
 }
-.scissor-game-container {
+.scissors-game-container {
   border-color: hsl(40, 84%, 53%);
   box-shadow: 0px 3.5px 0px hsla(39, 89%, 41%, 0.977);
 }
@@ -235,7 +248,7 @@ main {
   border-color: hsl(349, 70%, 56%);
   box-shadow: 0px 3.5px 0px hsla(349, 68%, 37%, 0.977);
 }
-.btn-game-scissor,
+.btn-game-scissors,
 .btn-game-rock,
 .btn-game-paper {
   width: 175px;
@@ -244,9 +257,76 @@ main {
   border: none;
   box-shadow: 0px 5px 1px rgba(0, 0, 0, 0.167) inset;
 }
-.img-game-scissor,
+.img-game-scissors,
 .img-game-rock,
 .img-game-paper {
   width: 90px;
   height: 95px;
+}
+
+/*GAME SYS CHOICE*/
+.scissors-sec-sys,
+.rock-sec-sys,
+.paper-sec-sys {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  margin-top: 50px;
+  animation: picked 2s ease 0s 1 normal forwards;
+  right: 100px;
+}
+.scissors-game-container-s,
+.rock-game-container-s,
+.paper-game-container-s {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 15px solid;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+.paper-game-container-s {
+  border-color: hsl(230, 89%, 65%);
+  box-shadow: 0px 3.5px 0px hsla(230, 63%, 54%, 0.977);
+}
+.scissors-game-container-s {
+  border-color: hsl(40, 84%, 53%);
+  box-shadow: 0px 3.5px 0px hsla(39, 89%, 41%, 0.977);
+}
+.rock-game-container-s {
+  border-color: hsl(349, 70%, 56%);
+  box-shadow: 0px 3.5px 0px hsla(349, 68%, 37%, 0.977);
+}
+
+/*PLAY AGAIN*/
+.play-again{
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 40px;
+}
+.play-again h2{
+    color: white;
+    font-size: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.playagain-btn{
+    border: none;
+    border-radius: 5px;
+    padding: 5px 35px;
+    background-color: white;
+    color: rgb(191, 27, 27);
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
