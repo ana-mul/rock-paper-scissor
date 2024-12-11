@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&family=Manrope:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+  </head>
+  <body>
+    <header>
+      <div class="score-container-a">
+        <img src="images/logo.svg" alt="logo" class="logo" />
+        <div class="score-container-b">
+          <h3 class="score-h3">score</h3>
+          <input type="number" class="score-input" value="0" readonly />
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="game-container">
+        <div class="paper-container">
+          <button class="btn-paper" type="button">
+            <img src="images/icon-paper.svg" alt="paper" class="img-paper" />
+          </button>
+        </div>
+        <div class="scissor-container">
+          <button class="btn-scissor" type="button">
+            <img
+              src="images/icon-scissors.svg"
+              alt="scissors"
+              class="img-scissor"
+            />
+          </button>
+        </div>
+        <div class="rock-container">
+          <button class="btn-rock" type="button">
+            <img src="images/icon-rock.svg" alt="rock" class="img-rock" />
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <section class="game">
+      <div class="user-choice">
+        <h3 class="choice-h3">you picked</h3>
+        <div class="scissor-game-container">
+          <button class="btn-game-scissor" type="button">
+            <img
+              src="images/icon-scissors.svg"
+              alt="scissors"
+              class="img-game-scissor"
+            />
+          </button>
+        </div>
+        <div class="rock-game-container">
+          <button class="btn-game-rock" type="button">
+            <img src="images/icon-rock.svg" alt="rock" class="img-game-rock" />
+          </button>
+        </div>
+        <div class="paper-game-container">
+          <button class="btn-game-paper" type="button">
+            <img
+              src="images/icon-paper.svg"
+              alt="paper"
+              class="img-game-paper"
+            />
+          </button>
+        </div>
+      </div>
+      <div class="system-choice">
+        <h3 class="choice-h3">the house picked</h3>
+        <div class="scissor-game-container">
+          <button class="btn-game-scissor" type="button">
+            <img
+              src="images/icon-scissors.svg"
+              alt="scissors"
+              class="img-game-scissor"
+            />
+          </button>
+        </div>
+        <div class="rock-game-container">
+          <button class="btn-game-rock" type="button">
+            <img src="images/icon-rock.svg" alt="rock" class="img-game-rock" />
+          </button>
+        </div>
+        <div class="paper-game-container">
+          <button class="btn-game-paper" type="button">
+            <img
+              src="images/icon-paper.svg"
+              alt="paper"
+              class="img-game-paper"
+            />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="rules">
+      <div class="rules-container">
+        <button class="btn-rules" type="button">rules</button>
+      </div>
+      <div class="rules-hide">
+        <span class="top-span">
+          <h2 class="rules-h2">rules</h2>
+          <button class="close-btn">
+            <img src="images/icon-close.svg" alt="close" />
+          </button>
+        </span>
+        <img src="images/image-rules.svg" alt="rules" class="img-rules" />
+      </div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
