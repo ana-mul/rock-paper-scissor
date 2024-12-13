@@ -68,6 +68,9 @@ header {
   color: var(--darkText);
   margin-left: 15px;
 }
+.score-input:focus{
+  outline: none;
+}
 main {
   display: flex;
   justify-content: center;
@@ -336,6 +339,92 @@ main {
 .playagain-btn:hover {
   box-shadow: inset 5px 5px 10px #a4a4a4, inset -5px -5px 10px #ffffff;
 }
+
+
+
+/* RESPONSIVE TABLET */
+@media (min-width: 768px) and (max-width: 1200px) {
+  .score-container-a {
+    width: 80%;
+  }
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+  }
+  .game-container {
+    width: 350px;
+    height: 350px;
+  }
+  .paper-container {
+    bottom: 250px;
+  }
+  .scissors-container {
+    bottom: 250px;
+  }
+  .rock-container {
+    left: 120px;
+  }
+  .rules-container {
+    width: 20%;
+    position: relative;
+    top: 50px;
+  }
+  
+  /* RULES HIDDEN */
+  .rules-hide {
+    bottom: 50px;
+    left: 200px;
+  }
+  .top-span {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .rules-h2 {
+    color: var(--darkText);
+    text-transform: uppercase;
+  }
+  .close-btn {
+    border: none;
+    background-color: transparent;
+  }
+  .img-rules {
+    position: relative;
+    top: 20px;
+  }
+  
+  /* GAME */
+  /*SECTION GAME*/
+  .game {
+    display: flex;
+    flex-direction: space-between;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  /*GAME USER CHOICE*/
+  .rock-section,
+  .paper-section,
+  .scissors-section {
+    left: 0px;
+  }
+  /*GAME SYS CHOICE*/
+  .scissors-sec-sys,
+  .rock-sec-sys,
+  .paper-sec-sys {
+    right: 0px;
+  }
+  
+  /*PLAY AGAIN*/
+  .play-again {
+    bottom: -50px;
+  }
+}
+
 
 /* RESPONSIVE MOBILE */
 @media  (max-width: 767px ) {
